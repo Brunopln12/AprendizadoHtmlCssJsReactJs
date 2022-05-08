@@ -11,3 +11,6 @@ window.alert("A soma dos números é: " + s1)
 // converter um número para uma string
 s.toString() 
 String(s1)
+// template string inovador
+let aula = "Javascript"
+`Eu estou aprendendo ${aula}`
