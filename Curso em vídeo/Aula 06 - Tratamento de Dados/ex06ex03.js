@@ -8,9 +8,17 @@ var s = n1 + n2
 var s1 = n3 + n4
 window.alert("A soma dos números é: " + s)
 window.alert("A soma dos números é: " + s1)
+// Alerta utilizando place holder
+window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`)
 // converter um número para uma string
 s.toString() 
 String(s1)
 // template string inovador
 let aula = "Javascript"
 `Eu estou aprendendo ${aula}`
+// qual o tamanho da string
+s.length(s1)
+// Jogar todas para letras maiúsculas
+s.toUpperCase(s)
+// Jogar todas para letras mnúsculas
+s.toLowerCase(s1)
