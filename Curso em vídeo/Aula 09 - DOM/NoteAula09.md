@@ -42,5 +42,10 @@ Métodos para selecionar e/ou acessar os elementos:
     - comando: getElementById()
     
 - por Nome
+    - comando: getElementsByName()
+
 - por Classe
+    - comando: getElementsbyClassName()
+
 - por Seletor - ss - mais novo
+    - comando: querySelector() ou querSelectorAll()

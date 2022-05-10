@@ -17,15 +17,26 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>click em mim</div>
+    <div id="msg">click em mim</div>
+    <div name="name">click em mim 2</div>
+    <div class="link">Click em mim 3</div>
     <script>
         var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+        var e = window.document.getElementsByName('name')[0]
+        var f = window.document.querySelector('div.link')
         window.document.write('Está escrito assim: ' + p1.innerText)
         p1.style.color = 'blue'
         corpo.style.background = 'black'
         document.write('<br/>' + p1.innerHTML)
         /* window.alert(p1.innerText) */
+        d.style.background = 'purple'
+        d.innerText = 'Estou aguardando...'
+        e.style.background = 'gray'
+        e.innerText = 'Aguardando demais!...'
+        f.style.color = 'blue'
+        f.innerText = 'Cansei de esperar...'
     </script>
 </body>
 </html>
