@@ -9,4 +9,4 @@ function iguais(num1,num2) {
     let menor20 = soma<20 ? "menor" : "maior"
     return  `Os números ${num1} e ${num2} ${comp1} são iguais. Sua soma é ${soma} que é ${maior10} do que 10 e ${menor20} do que 20.`
 }
-console.log(iguais(10,5));
+console.log(iguais(10,10));
