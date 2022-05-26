@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País que você nasceu!</title>
+    
+    <style>
+        body{
+            background-color: rgba(42, 140, 165, 0.788);
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+        }
+        section#dados__recebidos{
+            display: flex;
+            flex-direction: column;
+            border: solid 1px blanchedalmond;
+            align-items: center;
+        }
+        section#resultado{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4px;
+            padding-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Em que país você nasceu?</h1>
+    </header>
+    <section id="dados__recebidos">
+        <p>
+            Digite o país que você mora:
+        </p>
+        <p>
+            <input type="text" name="pais" id="pais">
+            <input type="button" value="verificar" onclick="verificar()">
+        </p>
+    </section>
+    <section id="resultado">
+
+    </section>
+    <script>
+        function verificar(){
+            var pais1 = document.querySelector("#pais").value
+            var res = window.document.querySelector
+            ('section#resultado')
+            res.innerHTML = `O país que você nasceu é o: ${pais1}`
+            if (pais1 == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro, bem vindo!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Estrangeiro, bem vindo!</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
