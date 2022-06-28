@@ -1,4 +1,4 @@
-# Exercício 02
+# Exercício 03
 
 Faça um programa que peça uma nota, entre zero e dez. 
 

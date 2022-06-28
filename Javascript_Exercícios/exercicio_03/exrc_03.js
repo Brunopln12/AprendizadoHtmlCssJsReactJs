@@ -1,7 +1,7 @@
 function verificar(){
     let nome = document.querySelector('#nome')
     let senha = document.querySelector('#senha')
-
+// Verifica se os inputs estão vazios
     if(nome.value.length == 0 || senha.value.length == 0){
         window.alert('Valores não preenchidos!')
     }else if (nome.value === senha.value) {
