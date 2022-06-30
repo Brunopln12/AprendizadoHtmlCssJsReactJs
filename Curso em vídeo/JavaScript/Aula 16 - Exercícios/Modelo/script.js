@@ -5,26 +5,27 @@ var array = []
 
 function adicionar(){
     if(elemento.value.length == 0){
-       return window.alert('Por favor, digite um número!')
+        window.alert('Por favor, digite um número!')
     } else if (elemento.value < 1 || elemento.value > 100){
-        return window.alert('O valor digitado deve ser entre 1 e 100')
+        window.alert('O valor digitado deve ser entre 1 e 100')
     } else if(array.includes(Number(elemento.value))){
-        return window.alert('Já contém este elemento!')
+        window.alert('Já contém este elemento!')
     }
     else{
         var numero = Number(elemento.value)
         var item = document.createElement('option')
         tab.appendChild(item)
         array.push(Number(elemento.value))
+        item.text = `Vetor ${numero} adicionado`
+        resultado.innerHTML = ''
     }
-    return item.text = `Vetor ${numero} adicionado`
+    elemento.value = ''
+    elemento.focus()
 }
 
 function analisar(){
-    if(elemento.value.length == 0){
-        return window.alert('Por favor, digite um número!')
-    } else if (elemento.value < 1 || elemento.value > 100){
-         return window.alert('O valor digitado deve ser entre 1 e 100')
+    if (array.length == 0){
+        return window.alert('Você precisa digitar valores para analisar!')
     } else{
        // função para ordenar um array numérico
         var arrayOrdenado = array.sort((a,b)=> a-b)
