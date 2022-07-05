@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando e formatando formulários</title>
+</head>
+<body>
+    <h1>Primeiro Formulário</h1>
+    <form action="malito:endereco@eletronico.com.br" method="get">
+        <input type="text" maxlength="6" name="nome" value="Nome"> <br><!--maxlength tamanho máximo de caracteres-->
+        <input type="button" value="Valor do botão" name="botao"> <br>
+        <input type="image" name="imagem" id="imagem" src="localização da imagem" alt="imagem usada para decorar o botão enviar"> <br>
+        <input type="checkbox" name="lista" id="lista" checked> <br>
+        <p>Descrição:</p>
+            <textarea name="descricao" rows="6" cols="50"></textarea> <br>
+        <input type="submit" value="Enviar"> <br>
+        <input type="reset" value="Limpar"> <br>
+        <input type="hidden" name="cpf" value="Verdadeiro">
+        <select name="lista de estados" id="estados">
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="PE">PE</option>
+        </select>
+
+    </form>
+</body>
+</html>
