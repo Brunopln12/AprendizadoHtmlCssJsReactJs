@@ -31,6 +31,10 @@ Sintaxe: <u>Texto</u>
 
 <a href="url"><img src="localDaImagem" alt="descriçãoParaImagem"></a> - utilizada para colocar um link em uma imagem.
 
+URL -> Absoluto e relativo.
+    - Absoluto -> Inclui todo o protocolo e nome de domínio
+    - Relativo -> relativo a página aberta no momento.
+
 *Atributos da tag <a>*
 
 - href -> Colocamos a referência para o link.
@@ -50,7 +54,7 @@ Atributos de cor para links:
 - vlink="cor" - após ser acessado
 - alink="cor" - quando o mouse estiver sobre o link
 
-**Tags de listas**
+**Tags de listas <u> <o>**
 
 <u> <li> </u> - lista não ordenada
 
@@ -58,3 +62,22 @@ Atributos de cor para links:
 
 Atributos para tag img
 - usemap - Demonstra que será utilizado um mapa na imagem
+
+**Tabelas**
+
+<table> -> Adiciona uma tabela no html.
+<caption> -> Define o que nossa tabela está fazendo.
+<thead> -> Aonde colocamos os dados de cabeçalho da nossa tabela.
+<tr> -> Adiciona linhas a nossa tabela.
+<th> -> Adiciona uma coluna de título a nossa tabela.
+<tbody> -> Aonde colocamos os dados de corpo da nossa tabela.
+<td> -> Adiciona uma coluna a nossa tabela.
+<tfoot> -> Onde fica o rodapé da nossa tabela.
+<colgroup> -> Agrupa as colunas.
+
+*Atributos*
+
+rowspan -> mescla linhas.
+colspan -> mescla colunas.
+span -> para referenciar quantas colunas eu desejo agrupar.
+scope -> Define se o item é uma linha ou coluna. (col ou row).
