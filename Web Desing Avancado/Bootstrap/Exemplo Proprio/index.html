@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora imc com Bootstrap</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery-3.6.0.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body class="container-sm text-white bg-dark border m-sm-3">
+    <form action="#" method="get" class="container-fluid m-sm-3">
+        <fieldset>
+            <legend>Cálculo IMC</legend>
+            <div>
+                <label for="nome">Digite seu nome</label><br>
+               <input id="nome" type="text" placeholder="Digite seu nome" name="nome" class="border rounded-1 border-white bg-dark text-white p-1">
+            </div>
+            <br>
+            <div>
+                <label for="idade">Digite a sua idade</label><br>
+                <input id="idade" type="text" placeholder="Digite a sua idade" name="idade" class="border rounded-1 border-white bg-dark text-white p-1">
+            </div>
+            <br>
+            <div>
+                <label for="peso">Digite seu peso</label><br>
+                <input id="peso" type="text" placeholder="Digite o peso em Kg" name="peso" class="border rounded-1 border-white bg-dark text-white p-1">
+            </div>
+            <br>
+            <div>
+                <label for="altura">Digite a sua altura</label><br>
+                <input id="altura" type="text" placeholder="Digite a altura em cm" class="border rounded-1 border-white bg-dark text-white p-1">
+            </div>
+            <br>
+            <button type="button"
+            onclick="calculaImc()" class="btn btn-secondary">Calcular</button>
+        </fieldset>   
+    </form>
+    <div>
+        <div id="resultado"></div>
+        <div id="status"></div>
+    </div>
+</body>
+</html>
