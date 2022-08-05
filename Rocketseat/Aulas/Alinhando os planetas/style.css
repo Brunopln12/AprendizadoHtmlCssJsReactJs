@@ -1,0 +1,15 @@
+.container{
+    padding: 1rem;
+}
+.container-header {
+    display: flex;
+    justify-content: space-between;
+}
+.container-list ul, .container-list {
+    list-style: none;
+    display: flex;
+    gap: .8rem;
+}
+.container-list ul li a{
+    text-decoration: none;
+}
