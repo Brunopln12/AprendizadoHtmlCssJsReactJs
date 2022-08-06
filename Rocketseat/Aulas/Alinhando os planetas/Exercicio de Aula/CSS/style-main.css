@@ -1,0 +1,42 @@
+.border{
+    border: 1px solid;
+}
+main{
+    display: flex;
+    height: 83vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+.aside{
+    flex-basis: 25%;
+    background-color: lightgray;
+    padding: .4em;
+}
+.container-main{
+    flex: 1;
+    display: flex;
+    gap: .8rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    width: 10em;
+    height: auto;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    padding: 1em;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+}
+button:hover{
+    background-color: rgba(245, 245, 245, 0.74);
+}
+button img{
+    width: 15%;
+}
