@@ -81,3 +81,35 @@ rowspan -> mescla linhas.
 colspan -> mescla colunas.
 span -> para referenciar quantas colunas eu desejo agrupar.
 scope -> Define se o item é uma linha ou coluna. (col ou row).
+
+## Tag datalist
+
+Uma tag que é usada juntamente com a tag *option* como a tag select e pode ser vinculada a um input pelo atríbuto *list*.
+
+E ainda podemos digitar o texto que ele vai auto-completanto de acordo com o que tem na lista.
+
+Html
+
+<label for="weekday">Selecione o dia</label>
+<input list="weekdays" id="weekday">
+<datalist id="weekdays">
+    <option value="Domingo">
+    <option value="Segunda">
+    <option value="Terça">
+    <option value="Quarta">
+    <option value="Quinta">
+    <option value="Sexta">
+    <option value="Sábado">
+</datalist>
+
+    <label for="weekday">Selecione o dia</label>
+    <input list="weekdays" id="weekday">
+    <datalist id="weekdays">
+        <option value="Domingo">
+        <option value="Segunda">
+        <option value="Terça">
+        <option value="Quarta">
+        <option value="Quinta">
+        <option value="Sexta">
+        <option value="Sábado">
+    </datalist>
