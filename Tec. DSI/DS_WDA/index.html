@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Jedi vs Sith</title>
+        
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Press Start 2P', cursive;
+            }
+            body{
+                align-items: center;
+                background: url(353667.webp) center / cover no-repeat;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            main{
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.6);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            h1 img{
+                width: 200px;
+            }
+            p{
+                display: inline-block;
+                font-size: 1.2rem;
+                line-height: 2;
+            }
+            p:nth-child(3), p:nth-child(4){
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 15px;
+                padding: .4rem;
+            }
+            #forcaJedi{
+                color: cornflowerblue;
+            }
+            #forcaSith{
+                color: crimson;
+            }
+            button{
+                background-color: #000;
+                border-radius: 15px;
+                color: #fff;
+                padding: 1rem;
+            }
+            button:hover{
+                background-color: #fff;
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1><img src="logo.png" alt="logo"></h1>
+            <p>Nível da Força</p>
+            <p>Jedi: <span id="forcaJedi"></span></p>
+            <p>Sith: <span id="forcaSith"></span></p>
+            <p><span id="vencedor"></span></p>
+            <button id="comecarBatalha">Batalha</button>
+        </main>
+        <script>
+            function Batalha () {
+                let jediForce = 0;
+                let sithForce = 0;
+
+                for (let index = 1; index < 3; index++) {
+                    jediForce += Math.floor(Math.random()*6 + 1);
+                    sithForce += Math.floor(Math.random()*6 + 1);
+                    
+                };
+                if (jediForce > sithForce) {
+                    document.querySelector('#vencedor').innerHTML = "Jedi venceu!";
+                } else if (jediForce < sithForce) {
+                    document.querySelector('#vencedor').innerHTML = "Sith venceu!";
+                } else {
+                    document.querySelector('#vencedor').innerHTML = "Não houve Vencedor!";
+                };
+                document.querySelector('#forcaJedi').innerHTML = jediForce;
+                document.querySelector('#forcaSith').innerHTML = sithForce;
+            };
+
+            document.querySelector('#comecarBatalha').onclick = Batalha;
+        </script>
+    </body>
+</html>
