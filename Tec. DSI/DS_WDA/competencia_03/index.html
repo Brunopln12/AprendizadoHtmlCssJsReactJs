@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos Jedi | Sith</title>
+        <style>
+            body{
+                background: url(fundo.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                color: #000;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Personagens</h1>
+        <button>Exibir</button>
+        <p>Personagem: <span id="Jedi"></span></p>
+        <p>Personagem: <span id="Sith"></span></p>
+
+        <script>
+            // função construtora do Objeto personagem
+            function Personagem(nome, tipo, forca) {
+                this.nome = nome;
+                this.tipo = tipo;
+                this.forca = new Number(forca);
+            }
+            // Dando valores as propriedades
+            var jedi = new Personagem('Obi-Wan','Jedi', 10);
+            var sith = new Personagem('Darth Vader','Sith', 10);
+            // função para exibir os personagens
+            function exibirPersonagens() {
+                document.querySelector('#Jedi').innerHTML = jedi.tipo + ' / ' + jedi.nome + ' / ' + jedi.forca;
+                document.querySelector('#Sith').innerHTML = sith.tipo + ' / ' + sith.nome + ' / ' + sith.forca;
+            }
+            document.querySelector('button').onclick = exibirPersonagens;
+        </script>
+    </body>
+</html>
