@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade Semanal</title>
+
+        <style>
+            *{
+                font-family: "consolas", sans-serif;
+                margin: 8px;
+                padding: 0px;
+            }
+            body{
+                background-color: #151518;
+                color: #dddfdf;
+                text-align: center;
+                margin-top: 200px;
+            }
+            h1{
+                color: rgb(43, 161, 161);
+            }
+            select{
+                width: 170px;
+            }
+        </style>
+
+        <script src="jquery-3.6.1.js"></script>
+    </head>
+
+    <body>
+        <h1>Personagens</h1>
+        <div>
+            Jedi: <select id="selectJedi"></select>
+            Sith: <select id="selectSith"></select>
+        </div>
+        <button id="selecionar">Selecionar</button>
+        <p id="personagemJedi"></p>
+        <p id="personagemSith"></p>
+
+        <script>
+            $(document).ready(function(){
+                var todosOsPersonagens = new Array();
+
+                // Função construtora
+                function Personagem(Tipo, Nome, Forca){
+                    this.Tipo = Tipo;
+                    this.Nome = Nome;
+                    this.Forca = new Number(Forca);
+                };
+
+                // Inserir personagens no Array
+                todosOsPersonagens.push(new Personagem('Jedi', 'Obi-Wan', 10));
+                todosOsPersonagens.push(new Personagem('Jedi', 'Yoda', 13));
+                todosOsPersonagens.push(new Personagem('Sith', 'Darth-Vader', 9));
+                todosOsPersonagens.push(new Personagem('Sith', 'Darth-Sidious', 12));
+
+                // Inserirndo os nomes na Lista de opções
+                $('<option>' + todosOsPersonagens[0].Nome + '</option>').appendTo('#selectJedi').attr('value', 0);
+                $('<option>' + todosOsPersonagens[1].Nome + '</option>').appendTo('#selectJedi').attr('value', 1);
+                $('<option>' + todosOsPersonagens[2].Nome + '</option>').appendTo('#selectSith').attr('value', 2);
+                $('<option>' + todosOsPersonagens[3].Nome + '</option>').appendTo('#selectSith').attr('value', 3);
+
+                // Botão
+                $('#selecionar').click(Selecionar);
+
+                // função selecionar
+                function Selecionar(){
+                    var jedi = todosOsPersonagens[$('#selectJedi :selected').attr('value')];
+                    var sith= todosOsPersonagens[$('#selectSith :selected').attr('value')];
+                    $('#personagemJedi').html(jedi.Tipo + ', ' + jedi.Nome + ', ' + jedi.Forca);
+                    $('#personagemSith').html(sith.Tipo + ', ' + sith.Nome + ', ' + sith.Forca);
+                }
+            });
+        </script>
+    </body>
+</html>

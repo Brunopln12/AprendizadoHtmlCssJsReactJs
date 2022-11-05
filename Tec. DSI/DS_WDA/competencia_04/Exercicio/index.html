@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalhando com JQuerry</title>
+
+        <style>
+            #body {
+            background-color: #303035;
+            text-align: center;
+            color: #70ccff;
+            }
+            .td {
+            width: 150px;
+            color: #dfdfdf;
+            font-family: "consolas", sans-serif;
+            }
+        </style>
+           
+        <script src="jquery-3.6.1.js"></script>
+    </head>
+    <body>
+        <h1>Tabela</h1>
+        <table>
+            <tr><th>Item</th><th>Quantidade</th><th>Valor</th><th>Total</th></tr>
+            <tr><td name="item">Item A</td><td>2</td><td>3,00</td><td>6,00</td></tr>
+            <tr><td name="item">Item B</td><td>3</td><td>3,00</td><td>9,00</td></tr>
+            <tr><td name="item">Item C</td><td>2</td><td>4,00</td><td>8,00</td></tr>
+            <tr><td name="item" colspan="3">Total</td><td name="total">23,00</td>
+            <tr>
+        </table>
+        <br /><button>Aplicar jQuery</button>
+        <script>
+           $(document).ready(function () {
+                $("button").click(function () {
+                //adiciona o id #body ao elemento <body>
+                $("body").attr("id", "body");
+                //centraliza a tabela aplicando o estilo
+                $("table").css("margin", "auto");
+                //adiciona o estilo à primeira linha da tabela
+                $("th").css("color", "rgb(220,220,170)");
+                //seleciona as linhas pares e aplica estilo
+                $("tr:even").css("background-color", "#252530");
+                //seleciona as linhas ímpares e aplica estilo
+                $("tr:odd").css("background-color", "#606065");
+                //adiciona a class .td a todos elementos <td>
+                $("td").addClass("td");
+                //adiciona o estilo aos elementos com name="item"
+                $("[name='item']").css("text-align", "left");
+                //adiciona o estilo ao elemento com name="total"
+                $("[name='total']").css("background-color", "#aa1515");
+                //remove o botão
+                $("button").remove();
+                });
+            });
+        </script>
+    </body>
+</html>
