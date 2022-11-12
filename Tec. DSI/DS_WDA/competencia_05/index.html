@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade Semanal</title>
+
+        <style>
+            *{
+                font-family: "consolas", sans-serif;
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #151518;
+                color: #dddfdf;
+                text-align: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            #jediVenceu{
+                background-color: blue;
+                margin: 0 2px;
+                width: 100vw;
+                height: 40px;
+            }
+            h1{
+                color: rgb(43, 161, 161);
+                margin: 1.2rem;
+            }
+            select{
+                width: 170px;
+                margin: 1.3rem;
+            }
+            button{
+                padding: 2px;
+                margin: 1.1rem;
+            }
+            #sithVenceu{
+                background-color: red;
+                margin: 0 2px;
+                width: 100vw;
+                height: 40px;
+            }
+        </style>
+
+        <script src="jquery-3.6.1.js"></script>
+    </head>
+
+    <body>
+        <div id="jediVenceu"></div>
+
+        <h1>Personagens</h1>
+        <div>
+            Jedi: <select id="selectJedi"></select>
+            Sith: <select id="selectSith"></select>
+        </div>
+        <button id="lutar">Lutar</button>
+        <p id="personagemJedi"></p>
+        <p id="personagemSith"></p>
+        <p id="personagemVencedor"></p>
+
+        <div id="sithVenceu"></div>
+        <script>
+            $(document).ready(function(){
+                var todosOsPersonagens = new Array();
+
+                // Função construtora
+                function Personagem(Tipo, Nome, Forca){
+                    this.Tipo = Tipo;
+                    this.Nome = Nome;
+                    this.Forca = new Number(Forca);
+                };
+
+                // Inserir personagens no Array
+                todosOsPersonagens.push(new Personagem('Jedi', 'Obi-Wan', 10));
+                todosOsPersonagens.push(new Personagem('Jedi', 'Yoda', 13));
+                todosOsPersonagens.push(new Personagem('Sith', 'Darth-Vader', 9));
+                todosOsPersonagens.push(new Personagem('Sith', 'Darth-Sidious', 12));
+
+                // Inserirndo os nomes na Lista de opções
+                $('<option>' + todosOsPersonagens[0].Nome + '</option>').appendTo('#selectJedi').attr('value', 0);
+                $('<option>' + todosOsPersonagens[1].Nome + '</option>').appendTo('#selectJedi').attr('value', 1);
+                $('<option>' + todosOsPersonagens[2].Nome + '</option>').appendTo('#selectSith').attr('value', 2);
+                $('<option>' + todosOsPersonagens[3].Nome + '</option>').appendTo('#selectSith').attr('value', 3);
+
+                // Botão
+                $('#lutar').click(Lutar);
+
+                // função Lutar
+                function Lutar(){
+
+                    // Estado inicoal da função lutar
+                    $('#personagemVencedor').html('').css({'font-size': '16px'});
+
+                    var jedi = todosOsPersonagens[$('#selectJedi :selected').attr('value')];
+                    var sith = todosOsPersonagens[$('#selectSith :selected').attr('value')];
+
+                    var jediForca = Math.floor(Math.random() * jedi.Forca + 1);
+                    var sithForca = Math.floor(Math.random() * sith.Forca + 1);
+
+                    // Determinando uma estrutura condicional para os vencedores da batalha
+
+                    if(jediForca > sithForca){
+                        $('#personagemVencedor').html(jedi.Nome + ', ' + jedi.Tipo).animate({'fontSize':'60px'});
+                        $('#jediVenceu').show();
+                        $('#sithVenceu').hide();
+                    }
+                    else if(sithForca > jediForca){
+                        $('#personagemVencedor').html(sith.Nome + ', ' + sith.Tipo).animate({'fontSize':'60px'});
+                        $('#jediVenceu').hide();
+                        $('#sithVenceu').show();
+                    }else{
+                        $('#personagemVencedor').html('Não hoveu vencedor!!').css({'font-size':'60px'}).slideDown(4000);
+                        $('#jediVenceu').hide();
+                        $('#sithVenceu').hide();
+                    };
+
+                    $('#personagemJedi').html(jedi.Nome + ' teste de força: ' + jediForca);
+                    $('#personagemSith').html(sith.Nome + ' teste de força: ' + sithForca);
+                };
+            });
+        </script>
+    </body>
+</html>
