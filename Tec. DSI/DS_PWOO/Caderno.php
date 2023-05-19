@@ -2,6 +2,7 @@
     class Caderno{
         public $tamanho;
         public $folhas;
+        private $capa;
         public function getTamanho (){
             return $this->tamanho;
         }
