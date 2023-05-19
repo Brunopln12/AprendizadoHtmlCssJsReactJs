@@ -9,9 +9,9 @@
         private $rounds;
         private $aprovada;
 
-        public function marcarLuta($desafiante, $desafiado)
+        public function marcarLuta(Lutador $desafiante, Lutador $desafiado)
         {
-            if ($desafiante->categoria === $desafiado->categoria && $desafiante != $desafiado) {
+            if ($desafiante->getCategoria() === $desafiado->getCategoria() && $desafiante != $desafiado) {
                 $this->setAprovada(true);
                 $this->setDesafiante($desafiante);
                 $this->setDesafiado($desafiado);
