@@ -9,6 +9,7 @@
 <body>
     <?php
         require_once"Lutador.php";
+        require_once"Luta.php";
 
         // Criar um array de lutadores
         $lutadores = array();
@@ -29,15 +30,18 @@
         $lutadores[] = $lutador6;
 
         // Testes para cada lutador
-        foreach ($lutadores as $lutador) {
-            $lutador->apresentar();
-            $lutador->status();
-            $lutador->ganharLuta();
-            $lutador->perderluta();
-            $lutador->empatarLuta();
-            $lutador->status();
-            echo "<br>";
-        }
+        // foreach ($lutadores as $lutador) {
+        //     $lutador->apresentar();
+        //     $lutador->status();
+        //     $lutador->ganharLuta();
+        //     $lutador->perderluta();
+        //     $lutador->empatarLuta();
+        //     $lutador->status();
+        //     echo "<br>";
+        // }
+        $ufc = new Luta;
+        $ufc->marcarLuta($lutador1,$lutador2);
+        $ufc->lutar();
     ?>
 </body>
 </html>
