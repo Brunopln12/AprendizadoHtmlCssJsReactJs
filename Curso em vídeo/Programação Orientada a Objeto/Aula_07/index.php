@@ -40,6 +40,8 @@
         //     echo "<br>";
         // }
         $ufc = new Luta;
+        $ufc->setDesafiante($Lutador1);
+        $ufc->setDesafiado($Lutador2);
         $ufc->marcarLuta($lutador1,$lutador2);
         $ufc->lutar();
     ?>

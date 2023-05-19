@@ -29,57 +29,57 @@
         }
 
         // Getter e Setter para $nome
-        private function getNome() {
+        public function getNome() {
             return $this->nome;
         }
 
-        private function setNome($nome) {
+        public function setNome($nome) {
             $this->nome = $nome;
         }
 
         // Getter e Setter para $nacionalidade
-        private function getNacionalidade() {
+        public function getNacionalidade() {
             return $this->nacionalidade;
         }
 
-        private function setNacionalidade($nacionalidade) {
+        public function setNacionalidade($nacionalidade) {
             $this->nacionalidade = $nacionalidade;
         }
 
         // Getter e Setter para $idade
-        private function getIdade() {
+        public function getIdade() {
             return $this->idade;
         }
 
-        private function setIdade($idade) {
+        public function setIdade($idade) {
             $this->idade = $idade;
         }
 
         // Getter e Setter para $altura
-        private function getAltura() {
+        public function getAltura() {
             return $this->altura;
         }
 
-        private function setAltura($altura) {
+        public function setAltura($altura) {
             $this->altura = $altura;
         }
 
         // Getter e Setter para $peso
-        private function getPeso() {
+        public function getPeso() {
             return $this->peso;
         }
 
-        private function setPeso($peso) {
+        public function setPeso($peso) {
             $this->peso = $peso;
             $this->setCategoria();
         }
 
         // Getter e Setter para $categoria
-        private function getCategoria() {
+        public function getCategoria() {
             return $this->categoria;
         }
 
-        private function setCategoria() {
+        public function setCategoria() {
             if ($this->getPeso() < 52.2) {
                 $this->categoria = "Inválido";
             }else if($this->getPeso() <= 70.3){
@@ -94,29 +94,29 @@
         }
 
         // Getter e Setter para $vitorias
-        private function getVitorias() {
+        public function getVitorias() {
             return $this->vitorias;
         }
 
-        private function setVitorias($vitorias) {
+        public function setVitorias($vitorias) {
             $this->vitorias = $vitorias;
         }
 
         // Getter e Setter para $derrotas
-        private function getDerrotas() {
+        public function getDerrotas() {
             return $this->derrotas;
         }
 
-        private function setDerrotas($derrotas) {
+        public function setDerrotas($derrotas) {
             $this->derrotas = $derrotas;
         }
 
         // Getter e Setter para $empates
-        private function getEmpates() {
+        public function getEmpates() {
             return $this->empates;
         }
 
-        private function setEmpates($empates) {
+        public function setEmpates($empates) {
             $this->empates = $empates;
         }
 

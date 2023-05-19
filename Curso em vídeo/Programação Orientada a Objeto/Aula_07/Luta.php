@@ -11,7 +11,7 @@
 
         public function marcarLuta($desafiante, $desafiado)
         {
-            if ($desafiante->categoria === $desafiado->categoria && $desafiante <> $desafiado) {
+            if ($desafiante->categoria === $desafiado->categoria && $desafiante != $desafiado) {
                 $this->setAprovada(true);
                 $this->setDesafiante($desafiante);
                 $this->setDesafiado($desafiado);
