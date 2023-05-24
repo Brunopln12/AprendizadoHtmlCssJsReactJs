@@ -12,10 +12,10 @@
         public function mudarTrabalho($novoSetor)
         {
             if ($this->trabalhando) {
-                echo'Mudando a pessoa de setor!';
+                echo'<br>Mudando a pessoa de setor!';
                 $this->setor = $novoSetor;
             }else{
-                echo'Este funcionário não está trabalhando!';
+                echo'<br>Este funcionário não está trabalhando!';
             }
         }
 

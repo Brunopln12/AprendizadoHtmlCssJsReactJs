@@ -11,11 +11,11 @@
         public function cancelarMatr()
         {
             if ($this->getMatr()) {
-                echo'Matrícula Cancelada!';
+                echo'<br>Matrícula Cancelada!';
                 $this->matr = null;
                 $this->curso = null;
             } else {
-                echo'Este aluno não foi matriculado!';
+                echo'<br>Este aluno não foi matriculado!';
             }
             
         }

@@ -9,7 +9,7 @@
         // Métodos
 
         public function fazerAniv(){
-            return $this->idade =+ 1;
+            return $this->idade ++;
         }
 
         // Métodos Especiais
