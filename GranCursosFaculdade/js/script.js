@@ -11,7 +11,7 @@ function iniciar() {
     aviso = document.getElementById("aviso");
     jogador = 1
 
-    console.log(tabuleiro);
+    console.table(tabuleiro);
 }
 
 function exibir() {
