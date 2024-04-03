@@ -1,0 +1,21 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+   border: #f00 dashed 5px;
+   margin: 30px 0;
+   padding: 30px;
+   text-align: center;
+}
+#sifrao{
+    color: green;
+}
+footer{
+    background-color: #555;
+    color: white;
+    padding: 20px;
+}
+.destaque{
+    color: rgba(255, 0, 0, 0.692);
+    font-weight: bold;
+}
